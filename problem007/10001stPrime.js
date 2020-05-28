@@ -3,7 +3,7 @@
 // What is the 10,001st prime number?
 
 function isPrime(n) {
-	if (n<2) return false;
+	if (n < 2) return false;
 	for (let i = 2; i <= Math.sqrt(n); i++)
 		if (n % i === 0) return false;
 	return true;
@@ -23,4 +23,4 @@ function nthPrimeNumber(n) {
 	return num - 1;
 }
 
-console.log(nthPrimeNumber(10001));
+console.log(nthPrimeNumber(249));
