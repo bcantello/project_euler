@@ -8,21 +8,34 @@ even-valued terms.*/
 
 // Creating Array of Fibonacci sequence numbers less than or equal to 4 million:
 
-const fibArray = [1, 2];
-let fibValue = 0;
-let fibSum = 0;
+/**
+ * SUDO CODE
+ *
+ * FUNCTION evenFibSum
+ *    CONST fibArray = an array with starting values of 1, 2
+ *    LET fibSum = 2
+ *    WHILE the number of values in the fibArray is less than or equal to 4000000
+ *        LET fibValue = the last value in fibArray + the second to last value in fibArray
+ *        ADD fibValue to the end of fibArray
+ *        IF fibValue is an even number
+ *            ADD fibValue to fibSum
+ *        END IF
+ *    END WHILE
+ *    RETURN fibSum
+ * END FUNCTION
+ */
 
-while (fibArray[fibArray.length - 1] <= 4000000) {
-    fibValue = (fibArray[fibArray.length - 1]) + (fibArray[fibArray.length - 2]);
-    fibArray.push(fibValue);
-}
-
-// Sum even value terms:
-
-for (let i = 0; i < fibArray.length; i++) {
-    if (fibArray[i] % 2 === 0) {
-        fibSum += fibArray[i];
+function evenFibSum(limit) {
+    const fibArray = [1, 2];
+    let fibSum = 2;
+    while (fibArray[fibArray.length - 1] <= limit) {
+        let fibValue = (fibArray[fibArray.length - 1]) + (fibArray[fibArray.length - 2]);
+        fibArray.push(fibValue);
+        if (fibValue % 2 === 0) {
+            fibSum += fibValue;
+        }
     }
+    return fibSum;
 }
 
-console.log(fibSum);
+console.log(evenFibSum(4000000));
