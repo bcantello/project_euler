@@ -218,7 +218,7 @@ const nums = `37107287533902102798797998220837590246510135740250
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690`;
 
-function largeSum(numList) {
+function largeSum1(numList) {
 	let number = (numList.split('\n')),
 		sum = 0n; // the n defines sum as a BigInt value, so that we can add other BigInt values to it.
 	number.forEach(e => {
@@ -227,4 +227,15 @@ function largeSum(numList) {
 	return sum;
 }
 
-console.log(largeSum(nums));
+console.log(largeSum1(nums));
+
+function largeSum2(numList) {
+	let number = (numList.split('\n')),
+		sum = 0;
+	number.forEach(e => {
+		sum += Number(e);
+	});
+	return sum;
+}
+
+console.log(largeSum2(nums))
