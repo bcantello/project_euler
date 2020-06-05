@@ -12,8 +12,8 @@ even-valued terms.*/
  * SUDO CODE
  *
  * FUNCTION evenFibSum
- *    CONST fibArray = an array with starting values of 1, 2
- *    LET fibSum = 2
+ *    SET fibArray = an array with starting values of 1, 2
+ *    SET fibSum = 2
  *    WHILE the number of values in the fibArray is less than or equal to 4000000
  *        LET fibValue = the last value in fibArray + the second to last value in fibArray
  *        ADD fibValue to the end of fibArray
